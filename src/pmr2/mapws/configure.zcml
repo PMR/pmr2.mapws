@@ -1,0 +1,29 @@
+<configure 
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    i18n_domain="pmr2.mapws">
+
+  <include file="profiles.zcml" />
+
+  <browser:page
+      for="Products.CMFPlone.interfaces.siteroot.IPloneSiteRoot"
+      name="map_query"
+      class=".ricordo.QueryForm"
+      permission="zope2.View"
+      />
+
+  <browser:page
+      for="Products.CMFPlone.interfaces.siteroot.IPloneSiteRoot"
+      name="map_query"
+      class=".jsonws.QueryForm"
+      layer="pmr2.json.interfaces.ISimpleJsonLayer"
+      permission="zope2.View"
+      />
+
+  <browser:resourceDirectory
+      name="pmr2.mapws.js"
+      directory="js"
+      layer="pmr2.mapws.interfaces.IJSLayer"
+      />
+
+</configure>

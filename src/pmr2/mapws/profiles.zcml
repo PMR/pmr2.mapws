@@ -1,0 +1,14 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    i18n_domain="pmr2.ricordo">
+
+  <genericsetup:registerProfile
+      name="default"
+      title="PMR2 MAP Client webservices integration"
+      directory="profiles/default"
+      description="Provides MAP Client specific utilities and webservices."
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
+</configure>

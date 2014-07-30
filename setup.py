@@ -36,6 +36,8 @@ setup(name='pmr2.mapws',
       install_requires=[
           'setuptools',
           # -*- Extra requirements: -*-
+          'pmr2.ricordo',
+          'pmr2.json',
       ],
       entry_points="""
       # -*- Entry points: -*-
