@@ -15,8 +15,16 @@
   <browser:page
       for="Products.CMFPlone.interfaces.siteroot.IPloneSiteRoot"
       name="map_query"
-      class=".jsonws.QueryForm"
-      layer="pmr2.json.interfaces.ISimpleJsonLayer"
+      class=".jsonws.SimpleJsonQueryForm"
+      layer="pmr2.json.v0.interfaces.IJsonLayer"
+      permission="zope2.View"
+      />
+
+  <browser:page
+      for="Products.CMFPlone.interfaces.siteroot.IPloneSiteRoot"
+      name="map_query"
+      class=".jsonws.CollectionQueryForm"
+      layer="pmr2.json.v1.interfaces.IJsonLayer"
       permission="zope2.View"
       />
 
